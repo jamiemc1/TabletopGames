@@ -2,6 +2,7 @@ package games;
 
 import core.*;
 import core.rules.AbstractRuleBasedForwardModel;
+import games.baghchal.*;
 import games.battlelore.*;
 import games.battlelore.gui.BattleloreGUI;
 import games.blackjack.*;
@@ -191,7 +192,11 @@ public enum GameType {
     Resistance(5, 10,
             Arrays.asList(Strategy, Bluffing, Deduction, Abstract),
             Arrays.asList(Memory, GridMovement),
-            ResGameState.class, ResForwardModel.class, ResParameters.class, ResGUIManager.class);
+            ResGameState.class, ResForwardModel.class, ResParameters.class, ResGUIManager.class),
+    BaghChal(2, 2,
+            Arrays.asList(Strategy, Ancient),
+            Arrays.asList(WorkerPlacement, GridMovement),
+            BaghChalGameState.class, BaghChalForwardModel.class, BaghChalGameParameters.class, BaghChalGUI.class);
 
 
     // Core classes where the game is defined
